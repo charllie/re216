@@ -6,6 +6,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
+#define LENGTH 512
+
 void error(const char *msg)
 {
     perror(msg);
@@ -45,12 +47,12 @@ int do_accept(int sock, struct sockaddr* client_addr, socklen_t* client_size)
 
 void do_read(int client_sock, char * buffer)
 {
-    read(client_sock,buffer,512);
+    read(client_sock,buffer,LENGTH);
 }
 
 void do_write(int client_sock, char * buffer)
 {
-    write(client_sock,buffer,512);
+    write(client_sock,buffer,LENGTH);
 }
 
 int main(int argc, char** argv)
@@ -59,7 +61,7 @@ int main(int argc, char** argv)
     int client_size;
     struct sockaddr_in server_addr;
     struct sockaddr_in client_addr;
-    char buffer[512];
+    char buffer[LENGTH];
 
     if (argc != 2)
     {
@@ -93,7 +95,7 @@ int main(int argc, char** argv)
         //we write back to the client
         do_write(client_sock, buffer);
 
-        memset(buffer, 0, 512);
+        memset(buffer, 0, LENGTH);
     }
     
     //clean up client socket
