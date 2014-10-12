@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/colors.h
+/home/charlie/re216/src/jalon02/commons/colors.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c
+/home/charlie/re216/src/jalon02/commons/contrib.c
 unistd.h
 -
 errno.h
 -
 contrib.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.h
+/home/charlie/re216/src/jalon02/commons/contrib.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.h
+/home/charlie/re216/src/jalon02/commons/contrib.h
 unistd.h
 -
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c
+/home/charlie/re216/src/jalon02/commons/network.c
 stdio.h
 -
 regex.h
@@ -46,15 +46,15 @@ stdio.h
 regex.h
 -
 user.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/user.h
+/home/charlie/re216/src/jalon02/commons/user.h
 callbacks.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/callbacks.h
+/home/charlie/re216/src/jalon02/commons/callbacks.h
 colors.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/colors.h
+/home/charlie/re216/src/jalon02/commons/colors.h
 network.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.h
+/home/charlie/re216/src/jalon02/commons/network.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.h
+/home/charlie/re216/src/jalon02/commons/network.h
 sys/socket.h
 -
 sys/types.h
@@ -64,15 +64,15 @@ netinet/in.h
 stdbool.h
 -
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/callbacks.c
+/home/charlie/re216/src/jalon02/server/callbacks.c
 callbacks.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/callbacks.h
+/home/charlie/re216/src/jalon02/server/callbacks.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/callbacks.h
+/home/charlie/re216/src/jalon02/server/callbacks.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server.h
+/home/charlie/re216/src/jalon02/server/server.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server_app.c
+/home/charlie/re216/src/jalon02/server/server_app.c
 resolv.h
 -
 string.h
@@ -82,11 +82,11 @@ sys/select.h
 stdlib.h
 -
 ../commons/network.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.h
+/home/charlie/re216/src/jalon02/commons/network.h
 server.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server.h
+/home/charlie/re216/src/jalon02/server/server.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server_lib.c
+/home/charlie/re216/src/jalon02/server/server_lib.c
 asm-generic/socket.h
 -
 regex.h
@@ -102,21 +102,21 @@ string.h
 stdbool.h
 -
 user.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/user.h
+/home/charlie/re216/src/jalon02/server/user.h
 ../commons/network.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.h
+/home/charlie/re216/src/jalon02/commons/network.h
 server.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server.h
+/home/charlie/re216/src/jalon02/server/server.h
 callbacks.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/callbacks.h
+/home/charlie/re216/src/jalon02/server/callbacks.h
 stdio.h
 -
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/user.c
+/home/charlie/re216/src/jalon02/server/user.c
 user.h
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/user.h
+/home/charlie/re216/src/jalon02/server/user.h
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/user.h
+/home/charlie/re216/src/jalon02/server/user.h
 stddef.h
 -
 netinet/in.h

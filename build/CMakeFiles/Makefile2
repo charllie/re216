@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src
+CMAKE_SOURCE_DIR = /home/charlie/re216/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build
+CMAKE_BINARY_DIR = /home/charlie/re216/build
 
 #=============================================================================
 # Directory level rules for directory jalon01
@@ -76,7 +76,7 @@ jalon01/preinstall:
 jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/all:
 	$(MAKE) -f jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/build.make jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/depend
 	$(MAKE) -f jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/build.make jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles  1
 	@echo "Built target RE216_JALON01_CLIENT"
 .PHONY : jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/all
 
@@ -86,9 +86,9 @@ all: jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/all
 
 # Build rule for subdir invocation for target.
 jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 0
 .PHONY : jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/rule
 
 # Convenience name for target.
@@ -111,7 +111,7 @@ clean: jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir/clean
 jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/all:
 	$(MAKE) -f jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/build.make jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/depend
 	$(MAKE) -f jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/build.make jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles  2
 	@echo "Built target RE216_JALON01_SERVER"
 .PHONY : jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/all
 
@@ -121,9 +121,9 @@ all: jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/all
 
 # Build rule for subdir invocation for target.
 jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 0
 .PHONY : jalon01/CMakeFiles/RE216_JALON01_SERVER.dir/rule
 
 # Convenience name for target.
@@ -163,7 +163,7 @@ jalon02/preinstall:
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/all:
 	$(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/depend
 	$(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles  3 4 5 6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles  3 4 5 6
 	@echo "Built target RE216_JALON02_CLIENT"
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/all
 
@@ -173,9 +173,9 @@ all: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/all
 
 # Build rule for subdir invocation for target.
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 0
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule
 
 # Convenience name for target.
@@ -198,7 +198,7 @@ clean: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/clean
 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/all:
 	$(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/depend
 	$(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles  7 8 9 10 11 12
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles  7 8 9 10 11 12
 	@echo "Built target RE216_JALON02_SERVER"
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/all
 
@@ -208,9 +208,9 @@ all: jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/all
 
 # Build rule for subdir invocation for target.
 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/charlie/re216/build/CMakeFiles 0
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule
 
 # Convenience name for target.

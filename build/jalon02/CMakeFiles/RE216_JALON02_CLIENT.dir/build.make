@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src
+CMAKE_SOURCE_DIR = /home/charlie/re216/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build
+CMAKE_BINARY_DIR = /home/charlie/re216/build
 
 # Include any dependencies generated for this target.
 include jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/depend.make
@@ -50,18 +50,18 @@ include jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/progress.make
 include jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/flags.make
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/flags.make
-jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o: /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_1)
+jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o: /home/charlie/re216/src/jalon02/client/client.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o   -c /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client.c
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o   -c /home/charlie/re216/src/jalon02/client/client.c
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.i"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client.c > CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.i
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/charlie/re216/src/jalon02/client/client.c > CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.i
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.s"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.s
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/charlie/re216/src/jalon02/client/client.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.s
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o.requires:
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o.requires
@@ -73,18 +73,18 @@ jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o.provides: jalon02/
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o.provides.build: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/flags.make
-jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o: /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client_lib.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_2)
+jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o: /home/charlie/re216/src/jalon02/client/client_lib.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o   -c /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client_lib.c
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o   -c /home/charlie/re216/src/jalon02/client/client_lib.c
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.i"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client_lib.c > CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.i
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/charlie/re216/src/jalon02/client/client_lib.c > CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.i
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.s"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client_lib.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.s
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/charlie/re216/src/jalon02/client/client_lib.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.s
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o.requires:
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o.requires
@@ -96,18 +96,18 @@ jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o.provides: jalo
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o.provides.build: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/flags.make
-jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o: /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_3)
+jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o: /home/charlie/re216/src/jalon02/commons/network.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o   -c /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o   -c /home/charlie/re216/src/jalon02/commons/network.c
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.i"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c > CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.i
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/charlie/re216/src/jalon02/commons/network.c > CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.i
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.s"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.s
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/charlie/re216/src/jalon02/commons/network.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.s
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o.requires:
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o.requires
@@ -119,18 +119,18 @@ jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o.provides: jalon0
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o.provides.build: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/flags.make
-jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o: /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_4)
+jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o: /home/charlie/re216/src/jalon02/commons/contrib.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/charlie/re216/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o   -c /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o   -c /home/charlie/re216/src/jalon02/commons/contrib.c
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.i"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c > CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.i
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/charlie/re216/src/jalon02/commons/contrib.c > CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.i
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.s"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.s
+	cd /home/charlie/re216/build/jalon02 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/charlie/re216/src/jalon02/commons/contrib.c -o CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.s
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o.requires:
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o.requires
@@ -158,7 +158,7 @@ jalon02/RE216_JALON02_CLIENT: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/common
 jalon02/RE216_JALON02_CLIENT: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make
 jalon02/RE216_JALON02_CLIENT: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable RE216_JALON02_CLIENT"
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RE216_JALON02_CLIENT.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/charlie/re216/build/jalon02 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RE216_JALON02_CLIENT.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build: jalon02/RE216_JALON02_CLIENT
@@ -171,10 +171,10 @@ jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/requires: jalon02/CMakeFiles/RE216_J
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/requires
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/clean:
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 && $(CMAKE_COMMAND) -P CMakeFiles/RE216_JALON02_CLIENT.dir/cmake_clean.cmake
+	cd /home/charlie/re216/build/jalon02 && $(CMAKE_COMMAND) -P CMakeFiles/RE216_JALON02_CLIENT.dir/cmake_clean.cmake
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/clean
 
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/depend:
-	cd /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02 /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02 /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/charlie/re216/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/charlie/re216/src /home/charlie/re216/src/jalon02 /home/charlie/re216/build /home/charlie/re216/build/jalon02 /home/charlie/re216/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/depend
 

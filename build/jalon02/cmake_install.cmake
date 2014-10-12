@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02
+# Install script for directory: /home/charlie/re216/src/jalon02
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

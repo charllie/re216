@@ -6,8 +6,6 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define LENGTH 512
-
 void error(const char *msg)
 {
     perror(msg);
@@ -16,26 +14,9 @@ void error(const char *msg)
 
 int do_socket()
 {
-<<<<<<< HEAD
-    int yes = 1;
-
-    //create the socket
-=======
-    int yes=1;
->>>>>>> FETCH_HEAD
     int fd = socket(AF_INET, SOCK_STREAM, 0);
-
-    //check for socket validity
-    if (fd == -1)
+    if ( fd == -1 )
         error("Socket error");
-<<<<<<< HEAD
-
-    //set socket option, to prevent "already in use" issue when rebooting the server right on
-    if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
-=======
-    if ( setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&yes,sizeof(int))==-1)
->>>>>>> FETCH_HEAD
-        error("Error setting socket options");
     return fd;
 }
 
@@ -49,35 +30,27 @@ void init_serv_addr(struct sockaddr_in* server_addr, int port)
 
 void do_bind(int sock, struct sockaddr_in addr)
 {
-    if (bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1)
+    if ( bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1 )
         error("Bind error");
 }
 
 int do_accept(int sock, struct sockaddr* client_addr, socklen_t* client_size)
 {
     int fd;
-    fd = accept(sock, client_addr, client_size);
-    if (fd == -1)
+    fd = accept(sock,client_addr,client_size);
+    if ( fd == -1 )
         error("Accept error");
     return fd;
 }
 
 void do_read(int client_sock, char * buffer)
 {
-<<<<<<< HEAD
-    read(client_sock, buffer, LENGTH);
-=======
-    read(client_sock,buffer,LENGTH);
->>>>>>> FETCH_HEAD
+    read(client_sock,buffer,512);
 }
 
 void do_write(int client_sock, char * buffer)
 {
-<<<<<<< HEAD
-    write(client_sock, buffer, LENGTH);
-=======
-    write(client_sock,buffer,LENGTH);
->>>>>>> FETCH_HEAD
+    write(client_sock,buffer,512);
 }
 
 int main(int argc, char** argv)
@@ -86,7 +59,7 @@ int main(int argc, char** argv)
     int client_size;
     struct sockaddr_in server_addr;
     struct sockaddr_in client_addr;
-    char buffer[LENGTH];
+    char buffer[512];
 
     if (argc != 2)
     {
@@ -109,24 +82,19 @@ int main(int argc, char** argv)
 
     client_size = sizeof(client_addr);
 
-    printf("Server : OK, Port : %s\n",argv[1]);
-
     //accept connection from client
     client_sock = do_accept(sock, (struct sockaddr *)&client_addr, &client_size);
     
     while(strncmp(buffer, "/quit", 5))
     {
-        memset(buffer, 0, LENGTH);
-        
         //read what the client has to say
         do_read(client_sock, buffer);
 
         //we write back to the client
         do_write(client_sock, buffer);
 
+        memset(buffer, 0, 512);
     }
-
-    printf("Server closed\n");
     
     //clean up client socket
     close(client_sock);
