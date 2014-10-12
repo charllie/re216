@@ -16,25 +16,17 @@ void error(const char *msg)
 
 int do_socket()
 {
-<<<<<<< HEAD
 	int yes = 1;
 
 	//create the socket
-=======
-	int yes;
->>>>>>> FETCH_HEAD
     int fd = socket(AF_INET, SOCK_STREAM, 0);
 
     //check for socket validity
     if (fd == -1)
         error("Socket error");
-<<<<<<< HEAD
     
     //set socket option, to prevent "already in use" issue when rebooting the server right on
     if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
-=======
-    if ( setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&yes,sizeof(int))==-1)
->>>>>>> FETCH_HEAD
         error("Error setting socket options");
     return fd;
 }
@@ -96,11 +88,7 @@ int main(int argc, char** argv)
 		handle_client_message(sock, msg);
 	
 		recv(sock, buffer, LENGTH, 0);
-<<<<<<< HEAD
 		printf("%s", buffer);
-=======
-		printf("%s",buffer);
->>>>>>> FETCH_HEAD
 	}
 
 	close(sock);
