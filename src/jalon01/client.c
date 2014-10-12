@@ -16,9 +16,12 @@ void error(const char *msg)
 
 int do_socket()
 {
+	int yes;
     int fd = socket(AF_INET, SOCK_STREAM, 0);
     if ( fd == -1 )
         error("Socket error");
+    if ( setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&yes,sizeof(int))==-1)
+        error("Error setting socket options");
     return fd;
 }
 

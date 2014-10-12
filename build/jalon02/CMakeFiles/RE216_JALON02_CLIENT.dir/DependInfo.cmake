@@ -4,10 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/charlie/re216/src/jalon02/client/client.c" "/home/charlie/re216/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o"
-  "/home/charlie/re216/src/jalon02/client/client_lib.c" "/home/charlie/re216/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o"
-  "/home/charlie/re216/src/jalon02/commons/contrib.c" "/home/charlie/re216/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o"
-  "/home/charlie/re216/src/jalon02/commons/network.c" "/home/charlie/re216/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client.c.o"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client/client_lib.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client/client_lib.c.o"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/contrib.c.o"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/commons/network.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
@@ -17,9 +17,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/charlie/re216/src/jalon02/commons"
-  "/home/charlie/re216/src/jalon02/server"
-  "/home/charlie/re216/src/jalon02/client"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server"
+  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

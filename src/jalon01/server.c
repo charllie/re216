@@ -16,9 +16,12 @@ void error(const char *msg)
 
 int do_socket()
 {
+    int yes=1;
     int fd = socket(AF_INET, SOCK_STREAM, 0);
     if ( fd == -1 )
         error("Socket error");
+    if ( setsockopt(fd,SOL_SOCKET,SO_REUSEADDR,&yes,sizeof(int))==-1)
+        error("Error setting socket options");
     return fd;
 }
 
@@ -84,19 +87,24 @@ int main(int argc, char** argv)
 
     client_size = sizeof(client_addr);
 
+    printf("Server : OK, Port : %s\n",argv[1]);
+
     //accept connection from client
     client_sock = do_accept(sock, (struct sockaddr *)&client_addr, &client_size);
     
     while(strncmp(buffer, "/quit", 5))
     {
+        memset(buffer, 0, LENGTH);
+        
         //read what the client has to say
         do_read(client_sock, buffer);
 
         //we write back to the client
         do_write(client_sock, buffer);
 
-        memset(buffer, 0, LENGTH);
     }
+
+    printf("Server closed\n");
     
     //clean up client socket
     close(client_sock);
