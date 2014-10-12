@@ -6,6 +6,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
+#define LENGTH 512
+
 void error(const char *msg)
 {
     perror(msg);
@@ -14,9 +16,18 @@ void error(const char *msg)
 
 int do_socket()
 {
+    int yes = 1;
+
+    //create the socket
     int fd = socket(AF_INET, SOCK_STREAM, 0);
-    if ( fd == -1 )
+
+    //check for socket validity
+    if (fd == -1)
         error("Socket error");
+
+    //set socket option, to prevent "already in use" issue when rebooting the server right on
+    if (setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
+        error("Error setting socket options");
     return fd;
 }
 
@@ -30,27 +41,27 @@ void init_serv_addr(struct sockaddr_in* server_addr, int port)
 
 void do_bind(int sock, struct sockaddr_in addr)
 {
-    if ( bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1 )
+    if (bind(sock, (struct sockaddr *)&addr, sizeof(addr)) == -1)
         error("Bind error");
 }
 
 int do_accept(int sock, struct sockaddr* client_addr, socklen_t* client_size)
 {
     int fd;
-    fd = accept(sock,client_addr,client_size);
-    if ( fd == -1 )
+    fd = accept(sock, client_addr, client_size);
+    if (fd == -1)
         error("Accept error");
     return fd;
 }
 
 void do_read(int client_sock, char * buffer)
 {
-    read(client_sock,buffer,512);
+    read(client_sock, buffer, LENGTH);
 }
 
 void do_write(int client_sock, char * buffer)
 {
-    write(client_sock,buffer,512);
+    write(client_sock, buffer, LENGTH);
 }
 
 int main(int argc, char** argv)
@@ -59,7 +70,7 @@ int main(int argc, char** argv)
     int client_size;
     struct sockaddr_in server_addr;
     struct sockaddr_in client_addr;
-    char buffer[512];
+    char buffer[LENGTH];
 
     if (argc != 2)
     {
@@ -82,19 +93,24 @@ int main(int argc, char** argv)
 
     client_size = sizeof(client_addr);
 
+    printf("Server : OK, Port : %s\n",argv[1]);
+
     //accept connection from client
     client_sock = do_accept(sock, (struct sockaddr *)&client_addr, &client_size);
     
     while(strncmp(buffer, "/quit", 5))
     {
+        memset(buffer, 0, LENGTH);
+        
         //read what the client has to say
         do_read(client_sock, buffer);
 
         //we write back to the client
         do_write(client_sock, buffer);
 
-        memset(buffer, 0, 512);
     }
+
+    printf("Server closed\n");
     
     //clean up client socket
     close(client_sock);
