@@ -68,8 +68,6 @@ int main(int argc,char** argv)
 	//connect to remote socket
 	do_connect(sock,sock_host);
 
-	//get user input
-	//readline()
 	printf("\nChat Room :\n\n");
 
 	while( strncmp(msg, "/quit", 5) )
@@ -80,7 +78,6 @@ int main(int argc,char** argv)
 		fgets(msg, LENGTH, stdin);
 
 		//send message to the server
-		//handle_client_message()
 		handle_client_message(sock, msg);
 	
 		recv(sock, buffer, LENGTH, 0);
