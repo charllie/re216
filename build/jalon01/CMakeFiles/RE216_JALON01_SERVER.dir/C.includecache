@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon01/server.c
+/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon01/server.c
 stdio.h
 -
 stdlib.h

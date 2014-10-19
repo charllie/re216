@@ -4,12 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/contrib.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/commons/contrib.c.o"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons/network.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/commons/network.c.o"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/callbacks.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server/callbacks.c.o"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server_app.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server/server_app.c.o"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/server_lib.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server/server_lib.c.o"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server/user.c" "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server/user.c.o"
+  "/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon02/server.c" "/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 
@@ -19,9 +14,6 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/commons"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/server"
-  "/home/ubuntu/TPReseau/RE216-MARCHAL-HUYNH/src/jalon02/client"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
