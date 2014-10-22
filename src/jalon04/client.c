@@ -5,8 +5,15 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netdb.h>
+#include <pthread.h>
 
 #define LENGTH 512
+
+struct c_info{
+	int sock;
+	char msg[LENGTH];
+	char buffer[LENGTH];
+};
 
 void error(const char *msg)
 {
@@ -46,12 +53,26 @@ void handle_client_message(int sock, char *msg)
 	send(sock,msg,strlen(msg),0);
 }
 
+void * msg_reception(void * arg)
+{	
+	struct c_info * info = arg;
+
+	while(1){
+		recv(info->sock, info->buffer, LENGTH, 0);
+		printf("%s\n", info->buffer);
+		if(!strcmp(info->buffer, "Server stopped working"))
+			break;
+	}
+
+	pthread_exit(NULL);
+}
+
 int main(int argc, char** argv)
 {
-	int sock;
+	struct c_info * info=malloc(sizeof(struct c_info));
 	struct sockaddr_in sock_host;
-	char msg[LENGTH];
-	char buffer[LENGTH];
+	pthread_t pthread;
+	int thr;
 
     if (argc != 3)
     {
@@ -63,47 +84,45 @@ int main(int argc, char** argv)
 	get_addr_info(&sock_host, atoi(argv[2]), argv[1]);
 
 	//get the socket
-	sock = do_socket();
+	info->sock = do_socket();
 
 	//connect to remote socket
-	do_connect(sock,sock_host);
+	do_connect(info->sock,sock_host);
 
-	recv(sock, buffer, LENGTH, 0);
+	recv(info->sock, info->buffer, LENGTH, 0);
 
 	//too much users
-	if(!strcmp(buffer, "Server cannot accept incoming connections anymore. Try again later.\n")) {
-		printf("%s",buffer);
-		close(sock);
+	if(!strcmp(info->buffer, "Server cannot accept incoming connections anymore. Try again later.\n")) {
+		printf("%s",info->buffer);
+		close(info->sock);
 		return 0;
 	}
 
 	printf("Connecting to server ... done!\n");
 
 	//pick a nickname
-	printf("%s > [Server] : %s\n", argv[1], buffer);
+	printf("[Server] : %s\n", info->buffer);
+
+	thr = pthread_create(&pthread, NULL, msg_reception, (void *) info);
 
 	while(1)
 	{
-		memset(buffer, 0, LENGTH);
-		memset(msg, 0, LENGTH);
-		printf("%s > ", argv[1]);
-		fgets(msg, LENGTH, stdin);
+		memset(info->buffer, 0, LENGTH);
+		memset(info->msg, 0, LENGTH);
+		fgets(info->msg, LENGTH, stdin);
 
 		//send message to the server
-		handle_client_message(sock, msg);
-	
-		recv(sock, buffer, LENGTH, 0);
+		handle_client_message(info->sock, info->msg);
 		
-		if(strcmp(msg, "/quit\n")) {
-			printf("%s > %s\n", argv[1], buffer);
-			if (!strcmp(buffer, "Server stopped working"))
+		if(strcmp(info->msg, "/quit\n")) {		
+			if (!strcmp(info->buffer, "Server stopped working"))
 				break;
 		} else {
 			break;
 		}
 	}
 
-	close(sock);
+	close(info->sock);
 
     return 0;
 }

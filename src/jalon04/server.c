@@ -52,7 +52,7 @@ void do_write(int client_sock, char * buffer)
 	write(client_sock, buffer, LENGTH);
 }
 
-void broadcast(c_list * l, char * msg)
+void broadcast(c_list * l, char msg[22])
 {
     user * p = list_get_head(l);
 
@@ -63,7 +63,55 @@ void broadcast(c_list * l, char * msg)
     }
 }
 
-argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH])
+void msgall(c_list * l, char msg[LENGTH], int sock)
+{
+    user * p = list_get_head(l);
+    char tmp[LENGTH];
+    memset(tmp, 0, LENGTH);
+    strcat(tmp,"[");
+    strcat(tmp,user_get_nickname(user_find_by_sock(l,sock)));
+    strcpy(msg,&msg[8]);
+    strcat(tmp,"] : ");
+    strcat(tmp,msg);
+    tmp[strlen(tmp)-1]='\0';
+
+    while(p != NULL)
+    {
+    	if(user_get_sock(p)!= sock && user_is_logged(p))
+        	do_write(user_get_sock(p), tmp);
+        p = next_user(p);
+    }
+}
+
+void msguni(c_list * l, char msg[LENGTH],int sock)
+{
+    char tmp[LENGTH];
+    char * token;
+    int c_sock;
+
+    memset(tmp, 0, LENGTH);
+    strcpy(msg,&msg[5]);
+    token=strtok(msg," ");
+    strcpy(tmp,token);
+    user * p = user_find_by_nickname(l,tmp);
+
+    if( p != NULL ){
+    
+    	strcpy(msg,&msg[1+strlen(tmp)]);
+    	memset(tmp, 0, LENGTH);
+    	strcat(tmp,"[");
+    	strcat(tmp,user_get_nickname(user_find_by_sock(l,sock)));
+    	strcat(tmp,"] : ");
+    	strcat(tmp,msg);
+    	tmp[strlen(tmp)-1]='\0';
+		do_write(user_get_sock(p), tmp);
+	} else {
+		do_write(sock, "[Server] : User not found");
+	}
+    
+}
+
+argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH], int sock)
 {
 	argument_t detected = NOTHING;
 	int logged = user_is_logged(p);
@@ -81,7 +129,7 @@ argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH])
 			user_set_nickname(l, p, strtok(NULL, " "));
 			detected = NICK;
 		} else if (!logged) {
-			do_write(user_get_sock(p), "please logon with /nick <your pseudo>");
+			do_write(user_get_sock(p), "[Server] : please logon with /nick <your pseudo>");
 			detected = LOGIN;
 		} else if (!strcmp(s, "/who")) {
 			who(l, user_get_sock(p));
@@ -89,6 +137,12 @@ argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH])
 		} else if (!strcmp(s, "/whois")) {
 			whois(l, p, strtok(NULL, " "));
 			detected = WHOIS;
+		} else if (!strcmp(s, "/msgall")) {
+			msgall(l,buffer,sock );
+			detected = MSGALL;
+		} else if (!strcmp(s, "/msg")) {
+			msguni(l,buffer,sock);
+			detected = MSG;
 		}
 
 		s = strtok(NULL, " ");
@@ -140,21 +194,26 @@ void * user_management(void * list)
 	int sock = user_get_sock(p);
 	int logged = user_is_logged(p);
 	char buffer[LENGTH];
+	char tmp[LENGTH];
 
 	while(1)
 	{
 		memset(buffer, 0, LENGTH);
-		
+		memset(tmp, 0, LENGTH);
 		//read what the client has to say
 		do_read(sock, buffer);
 
 		if (!strcmp(buffer, "/quit\n"))
 			break;
 
-		if (user_argument_detection(l, p, buffer) != NOTHING) 
+		if (user_argument_detection(l, p, buffer,sock) != NOTHING) 
 			continue;
-		else
-			do_write(sock, buffer);
+		else{
+			strcat(tmp,"[Server] : ");
+			strcat(tmp,buffer);
+			tmp[strlen(tmp)-1]='\0';
+			do_write(sock, tmp);	
+		}
 
 	}
 

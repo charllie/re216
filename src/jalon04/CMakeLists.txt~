@@ -9,9 +9,11 @@ SET(SRC_CLIENT
 	client.c
 	)
 
+find_package(Threads)
 
 add_executable(RE216_JALON01_CLIENT ${SRC_CLIENT})
 
+target_link_libraries(RE216_JALON01_CLIENT ${CMAKE_THREAD_LIBS_INIT})
 
 #add here source files you need to compile and link to the server app
 SET(SRC_SERVER

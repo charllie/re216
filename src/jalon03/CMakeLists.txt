@@ -16,7 +16,7 @@ add_executable(RE216_JALON03_CLIENT ${SRC_CLIENT})
 #add here source files you need to compile and link to the server app
 SET(SRC_SERVER
         server.c
-	list.c	
+        user.c
 	)
 
 find_package(Threads)
