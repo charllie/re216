@@ -54,70 +54,194 @@ void do_write(int client_sock, char * buffer)
 
 void broadcast(c_list * l, char msg[22])
 {
-    user * p = list_get_head(l);
+    c_list_elt * p = list_get_head(l);
 
     while(p != NULL)
     {
-        do_write(user_get_sock(p), msg);
-        p = next_user(p);
+    	user * u = list_elt_get_user(p);
+        do_write(user_get_sock(u), msg);
+        p = next_list_elt(p);
     }
 }
 
 void msgall(c_list * l, char msg[LENGTH], int sock)
 {
-    user * p = list_get_head(l);
+    c_list_elt * p = list_get_head(l);
     char tmp[LENGTH];
     memset(tmp, 0, LENGTH);
-    strcat(tmp,"[");
-    strcat(tmp,user_get_nickname(user_find_by_sock(l,sock)));
-    strcpy(msg,&msg[8]);
-    strcat(tmp,"] : ");
-    strcat(tmp,msg);
+    strcat(tmp, "\t\033[35m[");
+    strcat(tmp, list_get_name(l));
+    strcat(tmp, "]");
+    strcat(tmp, "\033[36m[");
+    strcat(tmp, user_get_nickname(user_find_by_sock(l, sock)));
+    strcat(tmp, "] : \033[0m");
+    strcat(tmp, msg);
     tmp[strlen(tmp)-1]='\0';
 
     while(p != NULL)
     {
-    	if(user_get_sock(p)!= sock && user_is_logged(p))
-        	do_write(user_get_sock(p), tmp);
-        p = next_user(p);
+    	user * u = list_elt_get_user(p);
+    	if(user_get_sock(u)!= sock && user_is_logged(u))
+        	do_write(user_get_sock(u), tmp);
+        p = next_list_elt(p);
     }
 }
 
-void msguni(c_list * l, char msg[LENGTH],int sock)
+void msguni(c_list * l, char msg[LENGTH], int sock)
 {
     char tmp[LENGTH];
     char * token;
     int c_sock;
 
     memset(tmp, 0, LENGTH);
-    strcpy(msg,&msg[5]);
-    token=strtok(msg," ");
-    strcpy(tmp,token);
-    user * p = user_find_by_nickname(l,tmp);
+    strcpy(msg, &msg[5]);
+    token = strtok(msg, " ");
+    if( token != NULL ){
+	    strcpy(tmp,token);
+	    user * u = user_find_by_nickname(l, tmp);
 
-    if( p != NULL ){
-    
-    	strcpy(msg,&msg[1+strlen(tmp)]);
-    	memset(tmp, 0, LENGTH);
-    	strcat(tmp,"[");
-    	strcat(tmp,user_get_nickname(user_find_by_sock(l,sock)));
-    	strcat(tmp,"] : ");
-    	strcat(tmp,msg);
-    	tmp[strlen(tmp)-1]='\0';
-		do_write(user_get_sock(p), tmp);
-	} else {
-		do_write(sock, "[Server] : User not found");
+	    if (u != NULL) {
+	    	strcpy(msg, &msg[1 + strlen(tmp)]);
+	    	memset(tmp, 0, LENGTH);
+	    	strcat(tmp, "\t\033[36m[");
+	    	strcat(tmp, user_get_nickname(user_find_by_sock(l, sock)));
+	    	strcat(tmp, "] : \033[0m");
+	    	strcat(tmp, msg);
+	    	tmp[strlen(tmp)-1] = '\0';
+			do_write(user_get_sock(u), tmp);
+		} else {
+			do_write(sock, "\033[0m[Server] : \033[1mUser not found");
+		}
 	}
-    
 }
 
-argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH], int sock)
+void create_channel(c_lists * r, int sock, char * name) {
+
+	c_list * l = NULL;
+	char msg[LENGTH];
+	memset(msg, 0, LENGTH);
+
+	if (name != NULL) {
+
+		if (strlen(name) > 20) {
+			do_write(sock, "\033[1m[Server] : \033[0mThe name of your channel is too long");
+		} else {
+			l = list_find_by_name(r, name);
+			if (l != NULL) {
+				do_write(sock, "\033[1m[Server] : \033[0mThis channel is already created");
+			} else {
+				l = list_new(name);
+				list_insert(r, l);
+				strcat(msg, "\033[1m[Server] : \033[0mYou have created channel ");
+				strcat(msg, name);
+				do_write(sock, msg);
+			}
+		}
+	} else {
+		do_write(sock, "\033[1m[Server] : \033[0mPlease specify a valid name for your channel");
+	} 
+}
+
+void join_channel(c_lists * index, user * u, char * channel_name) {
+	int sock = user_get_sock(u);
+	c_list * l = NULL;
+	c_lists * user_channels = user_get_channels(u);
+	char msg[LENGTH];
+	memset(msg, 0, LENGTH);
+
+	if (channel_name != NULL) {
+		l = list_find_by_name(index, channel_name);
+		if (l) {
+			if (l != list_find_by_name(user_channels, channel_name)) {	
+				list_insert_user(l, u);
+				list_insert(user_channels, l);
+			} else {
+				//top of the user lists
+				list_delete_in_lists(user_channels, l);
+				list_insert(user_channels, l);
+			}
+
+			strcat(msg, "\033[1m[Server] : \033[0mYou have joined ");
+			strcat(msg, channel_name);
+			do_write(sock, msg);
+		} else {
+			do_write(sock, "\033[1m[Server] : \033[0mChannel not found");
+		}
+	} else {
+		do_write(sock, "\033[1m[Server] : \033[0mInvalid channel name");
+	}
+}
+
+void quit_channel(c_lists * index, user * u, char * channel_name) {
+	int sock = user_get_sock(u);
+	c_list * main_list = lists_elt_get_list(lists_get_tail(index));
+	c_lists * user_channels = user_get_channels(u);
+	c_list * l = NULL;
+	char msg[LENGTH];
+	memset(msg, 0, LENGTH);
+	int users;
+
+	if (channel_name != NULL && strcmp(channel_name, "Main")) {
+		l = list_find_by_name(user_channels, channel_name);
+		if (l) {
+			users = list_delete_user(l, u, KEEP);
+			strcat(msg, "\033[1m[Server] : \033[0mYou have left ");
+			strcat(msg, channel_name);
+			if (users == 0) {
+				list_delete_in_lists(index, l);
+				list_delete_in_lists(user_channels, l);
+				list_delete(l);
+				strcat(msg, " which has been destroyed");
+			} else {
+				list_delete_in_lists(user_channels, l);
+			}
+			list_delete_in_lists(user_channels, main_list);
+			list_insert(user_channels, main_list);
+			do_write(sock, msg);
+		} else {
+			do_write(sock, "\033[1m[Server] : \033[0mYou are not in this channel");
+		}
+	} else {
+		do_write(sock, "\033[1m[Server] : \033[0mInvalid channel name");
+	}
+}
+
+void quit_all_channels(c_lists * index, user * u) {
+	c_lists * user_channels = user_get_channels(u);
+	c_lists_elt * m = lists_get_head(user_channels);
+	c_list * main_list = lists_elt_get_list(lists_get_tail(index));
+	c_list * l = NULL;
+	int users;
+
+	while(m) {
+		l = lists_elt_get_list(m);
+		if (l == main_list){
+			m = next_lists_elt(m);
+			continue;
+		}
+		users = list_delete_user(l, u, KEEP);
+		if (users == 0) {
+			list_delete_in_lists(index, l);
+			list_delete_in_lists(user_channels, l);
+			list_delete(l);
+		} else {
+			list_delete_in_lists(user_channels, l);
+		}
+		m = next_lists_elt(m);
+	}
+
+	lists_delete(user_channels);
+}
+
+argument_t user_argument_detection(c_lists * index, user * u, char buffer[LENGTH], int sock)
 {
 	argument_t detected = NOTHING;
-	int logged = user_is_logged(p);
+	c_lists_elt * m = lists_get_tail(index);
+	c_list * l = lists_elt_get_list(m);
+	int logged = user_is_logged(u);
 
 	char buf[LENGTH];
-	char *s;
+	char * s;
 
 	strncpy(buf, buffer, LENGTH);
 	strtok(buf, "\n");
@@ -126,23 +250,34 @@ argument_t user_argument_detection(c_list * l, user * p, char buffer[LENGTH], in
 	while (s != NULL)
 	{
 		if (!strcmp(s, "/nick")) {
-			user_set_nickname(l, p, strtok(NULL, " "));
+			user_set_nickname(l, u, strtok(NULL, " "));
 			detected = NICK;
 		} else if (!logged) {
-			do_write(user_get_sock(p), "[Server] : please logon with /nick <your pseudo>");
+			do_write(user_get_sock(u), "\033[1m[Server] : \033[0mplease logon with /nick <your pseudo>");
 			detected = LOGIN;
 		} else if (!strcmp(s, "/who")) {
-			who(l, user_get_sock(p));
+			who(l, user_get_sock(u));
 			detected = WHO;
 		} else if (!strcmp(s, "/whois")) {
-			whois(l, p, strtok(NULL, " "));
+			whois(l, u, strtok(NULL, " "));
 			detected = WHOIS;
-		} else if (!strcmp(s, "/msgall")) {
-			msgall(l,buffer,sock );
+		} else if (!strcmp(s, "/msgall") && strlen(buffer)>8) {
+			memset(buf, 0, LENGTH);
+			strcpy(buf, &buffer[8]);
+			msgall(l, buf, sock);
 			detected = MSGALL;
 		} else if (!strcmp(s, "/msg")) {
-			msguni(l,buffer,sock);
+			msguni(l, buffer, sock);
 			detected = MSG;
+		} else if (!strcmp(s, "/create")) {
+			create_channel(index, user_get_sock(u), strtok(NULL, " "));
+			detected = CREATE;
+		} else if (!strcmp(s, "/join")) {
+			join_channel(index, u, strtok(NULL, " "));
+			detected = JOIN;
+		} else if (!strcmp(s, "/quit")) {
+			quit_channel(index, u, strtok(NULL, " "));
+			detected = QUIT;
 		}
 
 		s = strtok(NULL, " ");
@@ -159,7 +294,7 @@ argument_t server_argument_detection(char buffer[LENGTH])
 	argument_t detected = NOTHING;
 
 	char buf[LENGTH];
-	char *s;
+	char * s;
 
 	strncpy(buf, buffer, LENGTH);
 	strtok(buf, "\n");
@@ -186,13 +321,17 @@ argument_t server_argument_detection(char buffer[LENGTH])
 	return detected;
 }
 
-void * user_management(void * list)
+void * user_management(void * lists)
 {	
-	c_list * l = list;
-	user * p = list_get_head(l);
+	c_lists * index = lists;
+	c_lists_elt * m = lists_get_tail(index);
+	c_list * main_list = lists_elt_get_list(m);
+	c_list * active_list = NULL;
+	c_list_elt * p = list_get_head(main_list);
+	user * u = list_elt_get_user(p);
 
-	int sock = user_get_sock(p);
-	int logged = user_is_logged(p);
+	int sock = user_get_sock(u);
+	int logged = user_is_logged(u);
 	char buffer[LENGTH];
 	char tmp[LENGTH];
 
@@ -203,21 +342,28 @@ void * user_management(void * list)
 		//read what the client has to say
 		do_read(sock, buffer);
 
-		if (!strcmp(buffer, "/quit\n"))
+		if (!strcmp(buffer, "/quit\n")) {
+			quit_all_channels(index, u);
 			break;
+		}
 
-		if (user_argument_detection(l, p, buffer,sock) != NOTHING) 
+		if (user_argument_detection(index, u, buffer,sock) != NOTHING) 
 			continue;
-		else{
-			strcat(tmp,"[Server] : ");
-			strcat(tmp,buffer);
-			tmp[strlen(tmp)-1]='\0';
-			do_write(sock, tmp);	
+		else {
+			active_list = lists_elt_get_list(lists_get_head(user_get_channels(u)));
+			if (active_list == main_list) {
+				strcat(tmp, "\033[1m[Server] : \033[0m");
+				strcat(tmp, buffer);
+				tmp[strlen(tmp)-1]='\0';
+				do_write(sock, tmp);
+			} else {
+				msgall(active_list, buffer, sock);
+			}
 		}
 
 	}
 
-	list_delete_user(l, p);
+	list_delete_user(main_list, u, DESTROY);
 	//clean up client socket
 	close(sock);
 	pthread_exit(NULL);
@@ -225,7 +371,9 @@ void * user_management(void * list)
 
 void * client_chat(void * arg)
 {
-	struct c_list * l = arg;
+	struct c_lists * index = arg;
+	struct c_lists_elt * m = lists_get_tail(index);
+	struct c_list * l = lists_elt_get_list(m);
 	struct sockaddr_in client_addr;
 
 	int client_size;
@@ -241,14 +389,15 @@ void * client_chat(void * arg)
 
 	while(1) {
 		//accept connection from client
-		client_sock = do_accept(list_get_sock(l), (struct sockaddr *)&client_addr, &client_size);
+		client_sock = do_accept(lists_get_sock(index), (struct sockaddr *)&client_addr, &client_size);
 
 		if (list_count(l) < MAX_CLIENT) {
 			now = time(NULL);
-			user * p = user_new(client_sock, now, client_addr);
-			list_insert_user(l, p);
+			user * u = user_new(client_sock, now, client_addr);
+			list_insert_user(l, u);
+			list_insert(user_get_channels(u), l);
 			do_write(client_sock, "please logon with /nick <your pseudo>");
-			pthread_create(&pthread, NULL, user_management, (void*) l);
+			pthread_create(&pthread, NULL, user_management, (void*) index);
 		} else {
 			do_write(client_sock, "Server cannot accept incoming connections anymore. Try again later.\n");
 			close(client_sock);
@@ -278,7 +427,9 @@ int main(int argc, char ** argv)
 	//create the socket, check for validity!
 	sock = do_socket();
 
-	c_list * l = list_new(sock);
+	c_lists * index = lists_new(sock);
+	c_list * main_list = list_new("Main");
+	list_insert(index, main_list);
 
 	//init the serv_add structure
 	init_serv_addr(&server_addr, atoi(argv[1]));
@@ -290,7 +441,7 @@ int main(int argc, char ** argv)
 	//specify the socket to be a server socket and listen for at most 20 concurrent client
 	listen(sock, MAX_CLIENT);
 
-	thr = pthread_create(&pthread, NULL, client_chat, (void *) l);
+	thr = pthread_create(&pthread, NULL, client_chat, (void *) index);
 
     while(1)
     {
@@ -301,22 +452,22 @@ int main(int argc, char ** argv)
         argument = server_argument_detection(option);
 
         if (argument == WHO) {
-            list_print(l);
+            list_print(main_list);
         } else if (argument == WHOIS) {
-            strcpy(option,&option[7]);
+            strcpy(option, &option[7]);
             option[strlen(option)-1]='\0';
-            user * p = user_find_by_nickname(l,option);
-            if( p != NULL)
-                printf("Pseudo : %s\nLogin time : %sIP : %s\nPort :%d\n",option,user_time(p),inet_ntoa(user_addr(p).sin_addr),user_addr(p).sin_port);
+            user * u = user_find_by_nickname(main_list, option);
+            if(u != NULL)
+                printf("Pseudo : %s\nLogin time : %sIP : %s\nPort :%d\n", option, user_time(u), inet_ntoa(user_addr(u).sin_addr),user_addr(u).sin_port);
         } else if (argument == QUIT) {
-            broadcast(l, "Server stopped working");
+            broadcast(main_list, "Server stopped working");
             break;
         }
     }
 	
 	//clean up server socket
 	close(sock);
-	list_delete(l);
+	lists_delete(index);
 
 	return 0;
 }

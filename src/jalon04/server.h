@@ -9,7 +9,9 @@ typedef enum arguments {
 	WHO, //4
 	WHOIS, //5
 	MSGALL, //6
-	MSG
+	MSG, //7
+	CREATE, //8
+	JOIN
 } argument_t;
 
 #endif /* SERVER_H_ */

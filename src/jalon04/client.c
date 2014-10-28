@@ -101,7 +101,7 @@ int main(int argc, char** argv)
 	printf("Connecting to server ... done!\n");
 
 	//pick a nickname
-	printf("[Server] : %s\n", info->buffer);
+	printf("\033[1m[Server] : \033[0m%s\n", info->buffer);
 
 	thr = pthread_create(&pthread, NULL, msg_reception, (void *) info);
 
