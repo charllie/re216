@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src
+# Install script for directory: /home/ubuntu/Bureau/re216-master/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,9 +34,10 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon01/cmake_install.cmake")
-  INCLUDE("/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon02/cmake_install.cmake")
-  INCLUDE("/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/Bureau/re216-master/build/jalon01/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/Bureau/re216-master/build/jalon02/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/Bureau/re216-master/build/jalon03/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/Bureau/re216-master/build/jalon04/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -46,7 +47,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/ubuntu/Bureau/re216-master/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/ubuntu/Bureau/re216-master/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

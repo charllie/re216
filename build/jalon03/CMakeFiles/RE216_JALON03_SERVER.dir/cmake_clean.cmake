@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o"
-  "CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o"
+  "CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o"
   "RE216_JALON03_SERVER.pdb"
   "RE216_JALON03_SERVER"
 )

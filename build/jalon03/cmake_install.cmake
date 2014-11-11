@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03
+# Install script for directory: /home/ubuntu/Bureau/re216-master/src/jalon03
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

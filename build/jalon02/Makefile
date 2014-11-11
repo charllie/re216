@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src
+CMAKE_SOURCE_DIR = /home/ubuntu/Bureau/re216-master/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build
+CMAKE_BINARY_DIR = /home/ubuntu/Bureau/re216-master/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/progress.marks
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles 0
+	cd /home/ubuntu/Bureau/re216-master/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Bureau/re216-master/build/CMakeFiles /home/ubuntu/Bureau/re216-master/build/jalon02/CMakeFiles/progress.marks
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Bureau/re216-master/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/clean
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/preinstall
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/preinstall
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/Bureau/re216-master/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule
 
 # Convenience name for target.
@@ -109,12 +109,12 @@ RE216_JALON02_CLIENT: jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/rule
 
 # fast build rule for target.
 RE216_JALON02_CLIENT/fast:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build
 .PHONY : RE216_JALON02_CLIENT/fast
 
 # Convenience name for target.
 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f CMakeFiles/Makefile2 jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule
 .PHONY : jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule
 
 # Convenience name for target.
@@ -123,7 +123,7 @@ RE216_JALON02_SERVER: jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/rule
 
 # fast build rule for target.
 RE216_JALON02_SERVER/fast:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build
 .PHONY : RE216_JALON02_SERVER/fast
 
 client.o: client.c.o
@@ -131,7 +131,7 @@ client.o: client.c.o
 
 # target to build an object file
 client.c.o:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.o
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.o
 .PHONY : client.c.o
 
 client.i: client.c.i
@@ -139,7 +139,7 @@ client.i: client.c.i
 
 # target to preprocess a source file
 client.c.i:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.i
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.i
 .PHONY : client.c.i
 
 client.s: client.c.s
@@ -147,7 +147,7 @@ client.s: client.c.s
 
 # target to generate assembly for a file
 client.c.s:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.s
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/build.make jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir/client.c.s
 .PHONY : client.c.s
 
 server.o: server.c.o
@@ -155,7 +155,7 @@ server.o: server.c.o
 
 # target to build an object file
 server.c.o:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.o
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.o
 .PHONY : server.c.o
 
 server.i: server.c.i
@@ -163,7 +163,7 @@ server.i: server.c.i
 
 # target to preprocess a source file
 server.c.i:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.i
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.i
 .PHONY : server.c.i
 
 server.s: server.c.s
@@ -171,7 +171,7 @@ server.s: server.c.s
 
 # target to generate assembly for a file
 server.c.s:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.s
+	cd /home/ubuntu/Bureau/re216-master/build && $(MAKE) -f jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/build.make jalon02/CMakeFiles/RE216_JALON02_SERVER.dir/server.c.s
 .PHONY : server.c.s
 
 # Help Target
@@ -201,6 +201,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/Bureau/re216-master/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

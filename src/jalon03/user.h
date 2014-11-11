@@ -12,7 +12,7 @@
 #include <arpa/inet.h>
 
 #define LENGTH 512
-#define MAX_CLIENT 2
+#define MAX_CLIENT 20
 #define PLENGTH LENGTH/MAX_CLIENT
 
 typedef struct c_list c_list;

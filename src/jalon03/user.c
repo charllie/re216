@@ -109,6 +109,7 @@ user * user_new(int sock, time_t now, struct sockaddr_in addr)
 	user->logged = 0;
 	user->time = now;
 	user->addr = addr;
+	memset(user->nickname,0,PLENGTH);
 	return user;
 }
 

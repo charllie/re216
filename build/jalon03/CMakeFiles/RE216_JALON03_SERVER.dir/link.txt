@@ -1,1 +1,1 @@
-/usr/bin/cc  -g    CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o  -o RE216_JALON03_SERVER -rdynamic -lpthread 
+/usr/bin/cc  -g    CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o  -o RE216_JALON03_SERVER -rdynamic -lpthread 

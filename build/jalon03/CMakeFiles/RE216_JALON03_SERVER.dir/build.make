@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src
+CMAKE_SOURCE_DIR = /home/ubuntu/Bureau/re216-master/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build
+CMAKE_BINARY_DIR = /home/ubuntu/Bureau/re216-master/build
 
 # Include any dependencies generated for this target.
 include jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/depend.make
@@ -50,18 +50,18 @@ include jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/progress.make
 include jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/flags.make
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/flags.make
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o: /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/server.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_1)
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o: /home/ubuntu/Bureau/re216-master/src/jalon03/server.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/Bureau/re216-master/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o   -c /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/server.c
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o   -c /home/ubuntu/Bureau/re216-master/src/jalon03/server.c
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON03_SERVER.dir/server.c.i"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/server.c > CMakeFiles/RE216_JALON03_SERVER.dir/server.c.i
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/Bureau/re216-master/src/jalon03/server.c > CMakeFiles/RE216_JALON03_SERVER.dir/server.c.i
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON03_SERVER.dir/server.c.s"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/server.c -o CMakeFiles/RE216_JALON03_SERVER.dir/server.c.s
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/Bureau/re216-master/src/jalon03/server.c -o CMakeFiles/RE216_JALON03_SERVER.dir/server.c.s
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o.requires:
 .PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o.requires
@@ -72,57 +72,57 @@ jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o.provides: jalon03/CMakeFi
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o.provides.build: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/flags.make
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o: /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/list.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o   -c /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/list.c
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/flags.make
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o: /home/ubuntu/Bureau/re216-master/src/jalon03/user.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/Bureau/re216-master/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o"
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o   -c /home/ubuntu/Bureau/re216-master/src/jalon03/user.c
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON03_SERVER.dir/list.c.i"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/list.c > CMakeFiles/RE216_JALON03_SERVER.dir/list.c.i
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RE216_JALON03_SERVER.dir/user.c.i"
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/ubuntu/Bureau/re216-master/src/jalon03/user.c > CMakeFiles/RE216_JALON03_SERVER.dir/user.c.i
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON03_SERVER.dir/list.c.s"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/list.c -o CMakeFiles/RE216_JALON03_SERVER.dir/list.c.s
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RE216_JALON03_SERVER.dir/user.c.s"
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/ubuntu/Bureau/re216-master/src/jalon03/user.c -o CMakeFiles/RE216_JALON03_SERVER.dir/user.c.s
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.requires:
-.PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.requires
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.requires:
+.PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.requires
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.provides: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.requires
-	$(MAKE) -f jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build.make jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.provides.build
-.PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.provides
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.provides: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.requires
+	$(MAKE) -f jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build.make jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.provides.build
+.PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.provides
 
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.provides.build: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.provides.build: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o
 
 # Object files for target RE216_JALON03_SERVER
 RE216_JALON03_SERVER_OBJECTS = \
 "CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o" \
-"CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o"
+"CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o"
 
 # External object files for target RE216_JALON03_SERVER
 RE216_JALON03_SERVER_EXTERNAL_OBJECTS =
 
 jalon03/RE216_JALON03_SERVER: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o
-jalon03/RE216_JALON03_SERVER: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o
+jalon03/RE216_JALON03_SERVER: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o
 jalon03/RE216_JALON03_SERVER: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build.make
 jalon03/RE216_JALON03_SERVER: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable RE216_JALON03_SERVER"
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RE216_JALON03_SERVER.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RE216_JALON03_SERVER.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build: jalon03/RE216_JALON03_SERVER
 .PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/requires: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/server.c.o.requires
-jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/requires: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/list.c.o.requires
+jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/requires: jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/user.c.o.requires
 .PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/requires
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/clean:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 && $(CMAKE_COMMAND) -P CMakeFiles/RE216_JALON03_SERVER.dir/cmake_clean.cmake
+	cd /home/ubuntu/Bureau/re216-master/build/jalon03 && $(CMAKE_COMMAND) -P CMakeFiles/RE216_JALON03_SERVER.dir/cmake_clean.cmake
 .PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/clean
 
 jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/depend:
-	cd /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03 /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03 /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/Bureau/re216-master/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/Bureau/re216-master/src /home/ubuntu/Bureau/re216-master/src/jalon03 /home/ubuntu/Bureau/re216-master/build /home/ubuntu/Bureau/re216-master/build/jalon03 /home/ubuntu/Bureau/re216-master/build/jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/depend
 

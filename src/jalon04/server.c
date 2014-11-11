@@ -110,7 +110,7 @@ void msguni(c_list * l, char msg[LENGTH], int sock)
 	    	tmp[strlen(tmp)-1] = '\0';
 			do_write(user_get_sock(u), tmp);
 		} else {
-			do_write(sock, "\033[0m[Server] : \033[1mUser not found");
+			do_write(sock, "\033[1m[Server] : \033[0mUser not found");
 		}
 	}
 }

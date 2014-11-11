@@ -47,7 +47,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build</value>
+					<value>/home/ubuntu/Bureau/re216-master/build</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -83,7 +83,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build</value>
+					<value>/home/ubuntu/Bureau/re216-master/build</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
@@ -111,7 +111,7 @@
 		<link>
 			<name>[Source directory]</name>
 			<type>2</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src</location>
+			<location>/home/ubuntu/Bureau/re216-master/src</location>
 		</link>
 		<link>
 			<name>[Subprojects]</name>
@@ -121,22 +121,27 @@
 		<link>
 			<name>[Subprojects]/RE216</name>
 			<type>2</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src</location>
+			<location>/home/ubuntu/Bureau/re216-master/src</location>
 		</link>
 		<link>
 			<name>[Subprojects]/RE216_JALON01</name>
 			<type>2</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon01</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon01</location>
 		</link>
 		<link>
 			<name>[Subprojects]/RE216_JALON02</name>
 			<type>2</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon02</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon02</location>
 		</link>
 		<link>
 			<name>[Subprojects]/RE216_JALON03</name>
 			<type>2</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon03</location>
+		</link>
+		<link>
+			<name>[Subprojects]/RE216_JALON04</name>
+			<type>2</type>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon04</location>
 		</link>
 		<link>
 			<name>[Targets]</name>
@@ -161,7 +166,7 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON01_CLIENT/Source Files/client.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon01/client.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon01/client.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON01_CLIENT/Header Files</name>
@@ -201,7 +206,7 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON01_SERVER/Source Files/server.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon01/server.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon01/server.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON01_SERVER/Header Files</name>
@@ -241,7 +246,7 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON02_CLIENT/Source Files/client.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon02/client.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon02/client.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON02_CLIENT/Header Files</name>
@@ -281,7 +286,7 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON02_SERVER/Source Files/server.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon02/server.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon02/server.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON02_SERVER/Header Files</name>
@@ -321,7 +326,7 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON03_CLIENT/Source Files/client.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/client.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon03/client.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON03_CLIENT/Header Files</name>
@@ -366,12 +371,12 @@
 		<link>
 			<name>[Targets]/[exe] RE216_JALON03_SERVER/Source Files/server.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/server.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon03/server.c</location>
 		</link>
 		<link>
-			<name>[Targets]/[exe] RE216_JALON03_SERVER/Source Files/list.c</name>
+			<name>[Targets]/[exe] RE216_JALON03_SERVER/Source Files/user.c</name>
 			<type>1</type>
-			<location>/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src/jalon03/list.c</location>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon03/user.c</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON03_SERVER/Header Files</name>
@@ -395,6 +400,101 @@
 		</link>
 		<link>
 			<name>[Targets]/[exe] RE216_JALON03_SERVER/Headers</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Source Files/client.c</name>
+			<type>1</type>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon04/client.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_CLIENT/Headers</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Source Files/server.c</name>
+			<type>1</type>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon04/server.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Source Files/user.c</name>
+			<type>1</type>
+			<location>/home/ubuntu/Bureau/re216-master/src/jalon04/user.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] RE216_JALON04_SERVER/Headers</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>

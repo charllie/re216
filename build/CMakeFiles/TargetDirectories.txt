@@ -1,6 +1,8 @@
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon01/CMakeFiles/RE216_JALON01_SERVER.dir
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03/CMakeFiles/RE216_JALON03_CLIENT.dir
-/home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/jalon03/CMakeFiles/RE216_JALON03_SERVER.dir
+/home/ubuntu/Bureau/re216-master/build/jalon01/CMakeFiles/RE216_JALON01_CLIENT.dir
+/home/ubuntu/Bureau/re216-master/build/jalon01/CMakeFiles/RE216_JALON01_SERVER.dir
+/home/ubuntu/Bureau/re216-master/build/jalon02/CMakeFiles/RE216_JALON02_CLIENT.dir
+/home/ubuntu/Bureau/re216-master/build/jalon02/CMakeFiles/RE216_JALON02_SERVER.dir
+/home/ubuntu/Bureau/re216-master/build/jalon03/CMakeFiles/RE216_JALON03_CLIENT.dir
+/home/ubuntu/Bureau/re216-master/build/jalon03/CMakeFiles/RE216_JALON03_SERVER.dir
+/home/ubuntu/Bureau/re216-master/build/jalon04/CMakeFiles/RE216_JALON04_CLIENT.dir
+/home/ubuntu/Bureau/re216-master/build/jalon04/CMakeFiles/RE216_JALON04_SERVER.dir

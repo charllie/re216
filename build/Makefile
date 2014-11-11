@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/src
+CMAKE_SOURCE_DIR = /home/ubuntu/Bureau/re216-master/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build
+CMAKE_BINARY_DIR = /home/ubuntu/Bureau/re216-master/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Bureau/re216-master/build/CMakeFiles /home/ubuntu/Bureau/re216-master/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/TPReseau/re216-MARCHAL-HUYNH/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Bureau/re216-master/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -176,6 +176,32 @@ RE216_JALON03_SERVER/fast:
 	$(MAKE) -f jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build.make jalon03/CMakeFiles/RE216_JALON03_SERVER.dir/build
 .PHONY : RE216_JALON03_SERVER/fast
 
+#=============================================================================
+# Target rules for targets named RE216_JALON04_CLIENT
+
+# Build rule for target.
+RE216_JALON04_CLIENT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RE216_JALON04_CLIENT
+.PHONY : RE216_JALON04_CLIENT
+
+# fast build rule for target.
+RE216_JALON04_CLIENT/fast:
+	$(MAKE) -f jalon04/CMakeFiles/RE216_JALON04_CLIENT.dir/build.make jalon04/CMakeFiles/RE216_JALON04_CLIENT.dir/build
+.PHONY : RE216_JALON04_CLIENT/fast
+
+#=============================================================================
+# Target rules for targets named RE216_JALON04_SERVER
+
+# Build rule for target.
+RE216_JALON04_SERVER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RE216_JALON04_SERVER
+.PHONY : RE216_JALON04_SERVER
+
+# fast build rule for target.
+RE216_JALON04_SERVER/fast:
+	$(MAKE) -f jalon04/CMakeFiles/RE216_JALON04_SERVER.dir/build.make jalon04/CMakeFiles/RE216_JALON04_SERVER.dir/build
+.PHONY : RE216_JALON04_SERVER/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -190,6 +216,8 @@ help:
 	@echo "... RE216_JALON02_SERVER"
 	@echo "... RE216_JALON03_CLIENT"
 	@echo "... RE216_JALON03_SERVER"
+	@echo "... RE216_JALON04_CLIENT"
+	@echo "... RE216_JALON04_SERVER"
 .PHONY : help
 
 

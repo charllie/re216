@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/Bureau/re216-master/src/jalon04/server.c
+pthread.h
+-
+user.h
+/home/ubuntu/Bureau/re216-master/src/jalon04/user.h
+server.h
+/home/ubuntu/Bureau/re216-master/src/jalon04/server.h
+
+/home/ubuntu/Bureau/re216-master/src/jalon04/server.h
+
+/home/ubuntu/Bureau/re216-master/src/jalon04/user.c
+user.h
+/home/ubuntu/Bureau/re216-master/src/jalon04/user.h
+
+/home/ubuntu/Bureau/re216-master/src/jalon04/user.h
+stdlib.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+time.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+server.h
+/home/ubuntu/Bureau/re216-master/src/jalon04/server.h
+
